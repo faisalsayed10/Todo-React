@@ -2,7 +2,7 @@ import React from "react";
 
 let count = 0;
 
-export default function Form({ todos, input, setInput, setTodos }) {
+export default function Form({ todos, input, setInput, setTodos, setStatus }) {
   const inputTextHandler = (e) => {
     setInput(e.target.value);
   };
@@ -13,6 +13,10 @@ export default function Form({ todos, input, setInput, setTodos }) {
     setTodos([...todos, { text: input, completed: false, id: count }]);
     setInput("");
   };
+
+  const statusHandler = (e) => {
+    setStatus(e.target.value)
+  }
 
   return (
     <form onSubmit={submitTodoHandler}>
@@ -26,7 +30,7 @@ export default function Form({ todos, input, setInput, setTodos }) {
         <i className="fas fa-plus-square"></i>
       </button>
       <div className="select">
-        <select name="todos" className="filter-todo">
+        <select onChange={statusHandler} name="todos" className="filter-todo">
           <option value="all">All</option>
           <option value="completed">Completed</option>
           <option value="uncompleted">Uncompleted</option>

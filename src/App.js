@@ -6,6 +6,8 @@ import ToDoList from "./Components/ToDoList";
 export default function App() {
   const [input, setInput] = useState("");
   const [todos, setTodos] = useState([]);
+  const [status, setStatus] = useState('all')
+  const [filteredTodos, setfilteredTodos] = useState([])
 
   return (
     <div className="App">
@@ -17,8 +19,9 @@ export default function App() {
         todos={todos}
         setTodos={setTodos}
         setInput={setInput}
+        setStatus={setStatus}
       />
-      <ToDoList todos={todos}/>
+      <ToDoList setTodos={setTodos} todos={todos}/>
     </div>
   );
 }
