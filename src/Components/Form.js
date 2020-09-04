@@ -22,6 +22,8 @@ export default function Form({ todos, input, setInput, setTodos, setStatus }) {
     <form onSubmit={submitTodoHandler}>
       <input
         value={input}
+        autoFocus={true}
+        placeholder='Create a Todo'
         onChange={inputTextHandler}
         type="text"
         className="todo-input"
