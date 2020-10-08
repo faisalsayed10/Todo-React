@@ -11,12 +11,6 @@ body {
 }
 header {
   font-size: 2rem;
-  background-image: linear-gradient(120deg, #f68765 0%, #fff782 100%);
-  background-color: #f3ec78;
-  background-size: 100%;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
 }
 
 header,
