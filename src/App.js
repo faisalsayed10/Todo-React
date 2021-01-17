@@ -16,6 +16,7 @@ export default function App() {
   useEffect(() => {
     filterHandler();
     setLocalTodos();
+    //eslint-disable-next-line
   }, [todos, status]);
 
   const filterHandler = () => {
